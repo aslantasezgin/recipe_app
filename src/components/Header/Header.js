@@ -1,4 +1,5 @@
 import React from "react";
+import './Header.css'
 
 
 
@@ -9,7 +10,7 @@ const Header = () => {
 
     return(
         <nav>
-
+        <img src={logo} className="logo-img"></img>
         </nav>
     )
 }
