@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './DetailPop.css'
-const DetailPop = () => {
+
+const DetailPop = ({changePopStatus}) => {
+ 
+
     return(
-        <div className="detailPop">
+         <div className="detailPop">
+       <span onClick={changePopStatus}><i className="fa-solid fa-xmark"></i></span>
+           <h2>Pizza</h2> 
             <p>
             Unu yoğurma kabına alalım ve ortasını havuz şeklinde açalım.
 Unun ortasına instant maya, şeker, tuz, zeytinyağı ve ılık suyu yavaş yavaş ilave ederek hamurumuzu yoğurmaya başlayalım. İnstant maya yerine yarım paket yaş mayada kullanabilirsiniz.
@@ -24,6 +29,7 @@ Son olarak pizzamızı tekrar fırına sürelim ve 200° fırında 20 dk daha pi
 Peynirleri güzel bir şekilde eriyen sucukları sosisleri gayet nefis bir şekilde pişen pizzamız servise hazır. Afiyet olsun :)
             </p>
         </div>
+   
     )
 }
 
