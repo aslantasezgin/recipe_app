@@ -12,5 +12,14 @@
 
 .container{
     max-width: 1140px!important;
-    max-width: 0px auto;
+    margin: 0px auto!important;
 }
+
+.container-flex{
+    max-width: 1140px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
