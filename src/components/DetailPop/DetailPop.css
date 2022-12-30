@@ -30,6 +30,7 @@
     font-size: 18px;
     font-weight: 700;
     padding-bottom: 10px;
+    position: relative;
 }
 
 
@@ -50,10 +51,10 @@
     font-size: 20px;
     transition: all 0.2s;
     cursor: pointer;
+    z-index: 30;
 }
 
 .detailPop span:hover{
-    font-size: 24px;
     color: red;
 }
 
@@ -61,3 +62,33 @@
    padding-top: 2px;
 }
 
+.detail-img{
+    max-width: 40px;
+    position: relative;
+    left: -10px;
+    top: -8px;
+    border-radius: 100%;
+    background-color: #ED443E;
+    padding: 2px;
+    display: inline-block;
+}
+
+.pop-header{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 15px;
+    top: -15px;
+    position: relative;  
+}
+
+.pop-header::before{
+    display: block;
+    width: 120%;
+    background-color: #ddd;
+    position: absolute;
+    left: -40px;
+    top: -35px;
+    content: "";
+    height: 75px;
+}

@@ -9,7 +9,10 @@ const DetailPop = ({changePopStatus,detailData}) => {
         <div className="pop-wrap">
          <div className="detailPop">
        <span onClick={changePopStatus}><i className="fa-solid fa-xmark"></i></span>
-           <h2>{detailData.strMeal} - <b> {detailData.strArea} Food </b> </h2> 
+        
+        
+        <div className="pop-header">  <img className="detail-img" src={detailData.strMealThumb}></img>
+         <h2>{detailData.strMeal} - <b> {detailData.strArea} Food </b> </h2> </div>
            <p><b> How Make This? </b></p>
            <p> {detailData.strInstructions}</p>
           
