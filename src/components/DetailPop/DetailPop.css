@@ -32,8 +32,15 @@
     padding-bottom: 10px;
 }
 
+
+.detailPop h2 b{
+    color: #ED443E;
+    font-weight: 700;
+}
+
 .detailPop p{
     font-size: 15px;
+    padding-bottom: 5px;
 }
 
 .detailPop span{
@@ -49,3 +56,8 @@
     font-size: 24px;
     color: red;
 }
+
+.detailPop ul li{
+   padding-top: 2px;
+}
+

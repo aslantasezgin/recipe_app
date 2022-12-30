@@ -9,6 +9,7 @@ const CardForRecipes= () => {
     const[recipeData, setRecipeData] = useState([])
     const [pop, setPop] = useState(false)
     const [recipe, setRecipe] = useState("")
+    const [detailData,setDetailData] = useState("")
 
 
     const changePopStatus = () => {
@@ -32,6 +33,10 @@ const CardForRecipes= () => {
     }, [recipe])
 
 
+    const getDetailPop=(data)=>{
+        setDetailData(data)
+        console.log(data)
+    }
 
   
     return(
@@ -52,8 +57,8 @@ const CardForRecipes= () => {
         {recipeData.map((item) => {
         return  (
             <>
-        <RecipeCard img={item.strMealThumb} name={item.strMeal}  changePopTrue={changePopTrue}> </RecipeCard>
-        {pop===true && <DetailPop id={item.idMeal}  changePopStatus={changePopStatus} ></DetailPop> }
+        <RecipeCard img={item.strMealThumb} name={item.strMeal} item={item} getDetailPop={getDetailPop}  changePopTrue={changePopTrue}> </RecipeCard>
+        {pop===true && <DetailPop id={item.idMeal} detailData={detailData}  changePopStatus={changePopStatus} ></DetailPop> }
         </>
 
         )
