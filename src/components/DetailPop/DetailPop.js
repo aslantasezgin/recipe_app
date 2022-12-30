@@ -3,8 +3,9 @@ import './DetailPop.css'
 
 const DetailPop = ({changePopStatus}) => {
  
-
+        
     return(
+        <div className="pop-wrap" onClick={changePopStatus}>
          <div className="detailPop">
        <span onClick={changePopStatus}><i className="fa-solid fa-xmark"></i></span>
            <h2>Pizza</h2> 
@@ -28,6 +29,7 @@ Domates sosunun üzerine bolca mozzarella peyniri rendesi veya kaşar peyniri re
 Son olarak pizzamızı tekrar fırına sürelim ve 200° fırında 20 dk daha pişmeye bırakalım.
 Peynirleri güzel bir şekilde eriyen sucukları sosisleri gayet nefis bir şekilde pişen pizzamız servise hazır. Afiyet olsun :)
             </p>
+        </div>
         </div>
    
     )
