@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_URL } from "../../const";
 import DetailPop from "../DetailPop/DetailPop";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import './CardForRecipes.css'
@@ -22,7 +23,7 @@ const CardForRecipes= () => {
     }
 
     const getData=(recipe)=>{
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe}`)
+        fetch(API_URL+recipe)
         .then((response) => response.json())
         .then(results => setRecipeData(results.meals) )
         console.log(recipeData)
