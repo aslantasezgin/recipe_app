@@ -37,3 +37,20 @@
     display: inline-block;
     padding:7px 24px;
 }
+
+
+@media(max-width:600px){
+    .hero {
+        width: 100%;
+        height: 435px;
+        position: relative;
+    }
+
+    .hero-text h2 {
+        color: rgba(255, 255, 255, 0.582);
+        font-size: 30px;
+        letter-spacing: 3px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+}

@@ -2,9 +2,9 @@ import React from "react";
 import './RecipeCard.css'
 
 
-const RecipeCard = ({changePopTrue,img,name,getDetailPop,item}) => {
+const RecipeCard = ({changePopTrue,img,name,getDetailPop,item,index}) => {
 return(
-    <div onClick={() => {
+    <div key={index} onClick={() => {
         changePopTrue()
        getDetailPop(item)
     }} className="recipe-card">

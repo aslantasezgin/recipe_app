@@ -26,7 +26,6 @@ const CardForRecipes= () => {
         fetch(API_URL+recipe)
         .then((response) => response.json())
         .then(results => setRecipeData(results.meals) )
-        console.log(recipeData)
     }
 
     useEffect(() => {
@@ -36,7 +35,6 @@ const CardForRecipes= () => {
 
     const getDetailPop=(data)=>{
         setDetailData(data)
-        console.log(data)
     }
 
   
@@ -55,16 +53,17 @@ const CardForRecipes= () => {
         <div className="container-flex">
 
     
-        {recipeData.map((item) => {
+        {recipeData.map((item,index) => {
         return  (
             <>
-        <RecipeCard img={item.strMealThumb} name={item.strMeal} item={item} getDetailPop={getDetailPop}  changePopTrue={changePopTrue}> </RecipeCard>
-        {pop===true && <DetailPop id={item.idMeal} detailData={detailData}  changePopStatus={changePopStatus} ></DetailPop> }
+        <RecipeCard key={index} img={item.strMealThumb} name={item.strMeal} item={item} getDetailPop={getDetailPop}  changePopTrue={changePopTrue}> </RecipeCard>
         </>
 
         )
-        
       })} 
+
+   {pop===true && <DetailPop  detailData={detailData}  changePopStatus={changePopStatus} ></DetailPop> }
+
 
         
 
